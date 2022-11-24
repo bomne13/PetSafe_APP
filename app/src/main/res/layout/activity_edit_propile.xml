@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPropileActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_backicon"
+            android:layout_marginRight="10dp"/>
+
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="프로필 수정"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <ImageButton
+            android:id="@+id/checkBtn"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/ic_check" />
+
+    </LinearLayout>
+
+    <!--하단선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="#EEEEEE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="-30dp"
+            android:background="@drawable/roundbtn_g7"
+            android:src="@drawable/ic_profile" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_photoadd"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="아이디"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/nicknameBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="닉네임"
+            app:titleVisible="true"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="닉네임을 입력해주세요."
+            android:inputType="text"
+            app:delBtnVisible="false"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle="중복 확인"
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt="이미 사용중인 닉네임 입니다."
+            app:GuidTxtVisible="false"/>
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/phoneBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:title="휴대폰 번호"
+            android:inputType="phone"
+            app:titleVisible="true"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="휴대폰 번호를 입력해주세요."
+            app:delBtnVisible="false"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle="인증 요청"
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt="이미 사용중인 닉네임 입니다."
+            app:GuidTxtVisible="false"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

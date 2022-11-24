@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityFragment"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!--전체글-->
+        <Button
+            android:id="@+id/communityBtn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_community_plus"
+            android:text="전체글"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right|center">
+
+            <!--검색 버튼-->
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_searchicon" />
+
+            <!--알림 버튼-->
+            <ImageButton
+                android:id="@+id/bellBtn"
+                android:layout_width="20dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:background="@drawable/ic_bellicon_nf"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--하단선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#EEEEEE" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/content_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/write_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+    <!--글 추가 버튼-->
+    <ImageButton
+        android:id="@+id/writeplusBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/ic_writeplus"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-60dp"/>
+
+
+</LinearLayout>

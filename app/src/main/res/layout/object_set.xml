@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ObjectSet"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_chart"
+                android:background="@drawable/ic_backicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="목표 설정"
+                android:textSize="17dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:layout_weight="0"
+                android:id="@+id/checkBtn"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:background="@drawable/ic_check" />
+        </LinearLayout>
+
+        <TextView
+            android:text="일일 걸음 수를 설정하세요."
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/black"/>
+
+        <NumberPicker
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/picker1"
+            android:theme="@style/Picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bordertest"
+            tools:ignore="MissingConstraints"/>
+    </LinearLayout>
+
+
+</LinearLayout>

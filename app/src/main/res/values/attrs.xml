@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <declare-styleable name="textboxJoin">
+        <attr name="title" format="reference|string"/>
+        <attr name="titleVisible" format="reference|boolean"/>
+        <attr name="Layout" format="reference|integer" />
+        <attr name="hint" format="reference|string" />
+        <attr name="android:inputType" />
+        <attr name="delBtnVisible" format="reference|boolean"/>
+        <attr name="confirmBtnVisible" format="reference|boolean"/>
+        <attr name="ConfirmBg" format="reference|integer"/>
+        <attr name="ConfirmTitle" format="reference|string"/>
+        <attr name="GuideTxt" format="reference|string"/>
+        <attr name="GuidTxtVisible" format="reference|boolean"/>
+<!--        <attr name="GuideTxtColor" format="reference|"/>-->
+    </declare-styleable>
+
+
+</resources>

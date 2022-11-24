@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!--상단바(뒤로가기, 현재 페이지명)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_backicon"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="로그인"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <com.example.capstone.textboxJoin
+                android:id="@+id/idBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:title=""
+                app:titleVisible="false"
+                app:delBtnVisible="false"
+                app:confirmBtnVisible="false"
+                app:ConfirmBg="@drawable/bottomborder_g"
+                app:ConfirmTitle=""
+                app:GuidTxtVisible="false"
+                app:GuideTxt=""
+                app:hint="아이디를 입력해주세요"
+                android:inputType="text"
+                app:Layout="@drawable/bottomborder_g"/>
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/pwdBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:title=""
+            app:titleVisible="false"
+            app:delBtnVisible="false"
+            app:confirmBtnVisible="false"
+            app:ConfirmBg="@drawable/bottomborder_g"
+            app:ConfirmTitle=""
+            app:GuidTxtVisible="false"
+            app:GuideTxt=""
+            android:inputType="textPassword"
+            app:hint="비밀번호를 입력해주세요"
+            app:Layout="@drawable/bottomborder_g"/>
+
+            <!--편의 버튼(자동 로그인, 아이디 저장, 찾기)-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="40dp">
+
+                <CheckBox
+                    android:id="@+id/autoidBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디 저장"
+                    android:textColor="#7e7e7e"
+                    android:textSize="12dp"
+                    style="@style/CustomCheckbox"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/infoSearchBtn"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:text="아이디/비밀번호 찾기"
+                        android:textColor="#7e7e7e"
+                        android:textSize="12dp"
+                        android:textStyle="normal"
+                        android:background="@color/white"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_marginRight="5dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--로그인 버튼-->
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/roundbtn_y"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="로그인"
+                android:textColor="#7e7e7e"
+                android:layout_marginBottom="12dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <!--회원가입 버튼-->
+            <Button
+                android:id="@+id/joinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/roundbtn_g"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="회원 가입"
+                android:textColor="#7e7e7e"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <!--SNS 로그인-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                android:text="SNS로 간편하게 로그인 하세요"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/naverBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/ic_navericon"/>
+
+                <ImageButton
+                    android:id="@+id/kakaoBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_kakaotalkicon"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

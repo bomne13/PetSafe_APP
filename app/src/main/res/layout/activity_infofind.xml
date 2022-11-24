@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infofindActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <!--상단바(뒤로가기, 현재 페이지명)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_backicon" />
+
+            <TextView
+                android:id="@+id/topText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="30dp"
+                android:text="아이디 찾기"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/selectGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <RadioButton
+                android:id="@+id/idFindBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/radio_selector"
+                android:text="아이디 찾기"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@drawable/radio_text_seletor"
+                android:button="@null"
+                android:checked="true"
+                android:padding="18dp"/>
+
+            <RadioButton
+                android:id="@+id/pwdFindBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/radio_selector"
+                android:text="비밀번호 찾기"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@drawable/radio_text_seletor"
+                android:button="@null"
+                android:padding="18dp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/id_findLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.example.capstone.textboxJoin
+                android:id="@+id/id_NameBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:title="이름"
+                app:titleVisible="true"
+                app:Layout="@drawable/roundborder_g4"
+                app:hint="이름을 입력해주세요."
+                app:delBtnVisible="false"
+                app:confirmBtnVisible="false"
+                app:ConfirmTitle=""
+                app:ConfirmBg="@drawable/roundbtn_g4"
+                app:GuideTxt="아이디를 입력해주세요."
+                app:GuidTxtVisible="false"/>
+
+            <com.example.capstone.textboxJoin
+                android:id="@+id/id_PhoneBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:title="휴대폰 번호"
+                app:titleVisible="true"
+                app:Layout="@drawable/roundborder_g4"
+                app:hint="휴대폰 번호를 입력해주세요.(숫자만 입력)"
+                app:delBtnVisible="false"
+                app:confirmBtnVisible="false"
+                app:ConfirmTitle="인증 번호"
+                app:ConfirmBg="@drawable/roundbtn_g4"
+                app:GuideTxt="휴대폰 번호를 입력해주세요."
+                app:GuidTxtVisible="false"/>
+
+<!--            <com.example.capstone.textboxJoin-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                app:title="인증번호"-->
+<!--                app:titleVisible="true"-->
+<!--                app:Layout="@drawable/roundborder_g4"-->
+<!--                app:hint="인증번호를 입력해주세요.(6자리)"-->
+<!--                app:delBtnVisible="false"-->
+<!--                app:confirmBtnVisible="false"-->
+<!--                app:ConfirmTitle=""-->
+<!--                app:ConfirmBg="@drawable/roundbtn_g4"-->
+<!--                app:GuideTxt="인증번호를 입력해주세요."-->
+<!--                app:GuidTxtVisible="false"/>-->
+
+            <Button
+                android:id="@+id/id_submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbtn_g"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="확인"
+                android:textColor="#7e7e7e"
+                style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pwd_findLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.example.capstone.textboxJoin
+                android:id="@+id/pwd_IdBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:title="아이디"
+                app:titleVisible="true"
+                app:Layout="@drawable/roundborder_g4"
+                app:hint="아이디를 입력해주세요."
+                app:delBtnVisible="false"
+                app:confirmBtnVisible="false"
+                app:ConfirmTitle=""
+                app:ConfirmBg="@drawable/roundbtn_g4"
+                app:GuideTxt="아이디를 입력해주세요."
+                app:GuidTxtVisible="false"/>
+
+            <com.example.capstone.textboxJoin
+                android:id="@+id/pwd_PhoneBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:title="휴대폰 번호"
+                app:titleVisible="true"
+                app:Layout="@drawable/roundborder_g4"
+                app:hint="휴대폰 번호를 입력해주세요.(숫자만 입력)"
+                app:delBtnVisible="false"
+                app:confirmBtnVisible="false"
+                app:ConfirmTitle="인증 번호"
+                app:ConfirmBg="@drawable/roundbtn_g4"
+                app:GuideTxt="휴대폰 번호를 입력해주세요."
+                app:GuidTxtVisible="false"/>
+
+<!--            <com.example.capstone.textboxJoin-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                app:title="인증번호"-->
+<!--                app:titleVisible="true"-->
+<!--                app:Layout="@drawable/roundborder_g4"-->
+<!--                app:hint="인증번호를 입력해주세요.(6자리)"-->
+<!--                app:delBtnVisible="false"-->
+<!--                app:confirmBtnVisible="false"-->
+<!--                app:ConfirmTitle=""-->
+<!--                app:ConfirmBg="@drawable/roundbtn_g4"-->
+<!--                app:GuideTxt="인증번호를 입력해주세요."-->
+<!--                app:GuidTxtVisible="false"/>-->
+
+            <Button
+                android:id="@+id/pwd_submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbtn_g"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="확인"
+                android:textColor="#7e7e7e"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetaddActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_backicon"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="반려동물 추가"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <ImageButton
+            android:id="@+id/checkBtn"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/ic_check" />
+
+    </LinearLayout>
+
+    <!--하단선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="#EEEEEE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="-30dp"
+            android:background="@drawable/roundbtn_g7"
+            android:src="@drawable/ic_profile" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_photoadd"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/petNameBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="반려동물 이름"
+            app:titleVisible="true"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="이름을 입력해주세요."
+            android:inputType="text"
+            app:delBtnVisible="false"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle=""
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt=""
+            app:GuidTxtVisible="false"/>
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/petBreedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:title="반려동물 종류"
+            app:titleVisible="true"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="종류를 입력해주세요."
+            android:inputType="text"
+            app:delBtnVisible="false"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle=""
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt=""
+            app:GuidTxtVisible="false"/>
+
+        <!-- 생년월일일 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="생년월일"
+            android:textColor="#7e7e7e"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/roundborder_g4"
+            android:gravity="center"
+            android:paddingLeft="20px">
+
+            <Button
+                android:id="@+id/datePickerButton"
+                style="?android:spinnerStyle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_calendar"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:textColor="#7e7e7e"
+                android:textSize="11dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="생년월일을 입력해주세요."
+                android:textColor="#7e7e7e"
+                android:textColorHint="#7e7e7e"
+                android:textSize="14dp"
+                android:paddingLeft="10px"
+                android:gravity="left|center"/>
+        </LinearLayout>
+
+        <!-- 성별 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="성별"
+            android:textColor="#7e7e7e"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <RadioGroup
+            android:id="@+id/selectGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/maleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/pet_radio_selector"
+                android:text="남아"
+                android:textColor="@drawable/pet_radio_text_seletor"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:drawableTop="@drawable/ic_maleicon"
+                android:paddingTop="12dp"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="2dp"/>
+
+
+            <RadioButton
+                android:id="@+id/femaleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/pet_radio_selector"
+                android:text="여아"
+                android:textColor="@drawable/pet_radio_text_seletor"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:drawableTop="@drawable/ic_femaleicon"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="2dp"/>
+        </RadioGroup>
+
+        <!-- 메모 -->
+        <com.example.capstone.textboxJoin
+            android:id="@+id/memoBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:title="메모"
+            app:titleVisible="true"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="메모를 입력해주세요."
+            android:inputType="text"
+            app:delBtnVisible="false"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle=""
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt=""
+            app:GuidTxtVisible="false"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

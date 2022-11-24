@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pwdresultActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <!--상단바(뒤로가기, 현재 페이지명)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_backicon" />
+
+            <TextView
+                android:id="@+id/topText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="30dp"
+                android:text="새 비밀번호 설정"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/pwdBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:title="새 비밀번호"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="새 비밀번호를 입력해주세요."
+            app:delBtnVisible="true"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle=""
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt="새 비밀번호를 입력해주세요."
+            app:GuidTxtVisible="false"/>
+
+        <com.example.capstone.textboxJoin
+            android:id="@+id/checkpwdBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:title="새 비밀번호 확인"
+            app:Layout="@drawable/roundborder_g4"
+            app:hint="비밀번호를 재입력해주세요."
+            app:delBtnVisible="true"
+            app:confirmBtnVisible="false"
+            app:ConfirmTitle=""
+            app:ConfirmBg="@drawable/roundbtn_g4"
+            app:GuideTxt="새 비밀번호를 입력해주세요."
+            app:GuidTxtVisible="false"/>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundbtn_g"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="확인"
+            android:textColor="#7e7e7e"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

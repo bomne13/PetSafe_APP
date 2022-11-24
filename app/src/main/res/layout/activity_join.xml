@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!--상단바(뒤로가기, 현재 페이지명)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_backicon"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="회원가입"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.example.capstone.textboxJoin
+                    android:id="@+id/idBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:title="아이디"
+                    app:titleVisible="true"
+                    app:Layout="@drawable/roundborder_g4"
+                    app:hint="아이디를 입력해주세요."
+                    android:inputType="text"
+                    app:delBtnVisible="false"
+                    app:confirmBtnVisible="false"
+                    app:ConfirmTitle="중복 확인"
+                    app:ConfirmBg="@drawable/roundbtn_g4"
+                    app:GuideTxt="아이디를 입력해주세요."
+                    app:GuidTxtVisible="false"/>
+
+                <com.example.capstone.textboxJoin
+                    android:id="@+id/pwdBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:title="비밀번호"
+                    android:inputType="textPassword"
+                    app:titleVisible="true"
+                    app:Layout="@drawable/roundborder_g4"
+                    app:hint="비밀번호를 입력해주세요."
+                    app:delBtnVisible="false"
+                    app:confirmBtnVisible="false"
+                    app:ConfirmTitle=""
+                    app:ConfirmBg="@drawable/roundbtn_g4"
+                    app:GuideTxt="비밀번호를 입력해주세요."
+                    app:GuidTxtVisible="false"/>
+
+                <com.example.capstone.textboxJoin
+                    android:id="@+id/checkpwdBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:title="비밀번호 확인"
+                    android:inputType="textPassword"
+                    app:titleVisible="true"
+                    app:Layout="@drawable/roundborder_g4"
+                    app:hint="비밀번호를 다시 입력해주세요."
+                    app:delBtnVisible="false"
+                    app:confirmBtnVisible="false"
+                    app:ConfirmTitle=""
+                    app:ConfirmBg="@drawable/roundbtn_g4"
+                    app:GuideTxt="비밀번호를 입력해주세요."
+                    app:GuidTxtVisible="false"/>
+
+                <com.example.capstone.textboxJoin
+                    android:id="@+id/nameBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:title="이름"
+                    android:inputType="text"
+                    app:titleVisible="true"
+                    app:Layout="@drawable/roundborder_g4"
+                    app:hint="이름을 입력해주세요."
+                    app:delBtnVisible="false"
+                    app:confirmBtnVisible="false"
+                    app:ConfirmTitle=""
+                    app:ConfirmBg="@drawable/roundbtn_g4"
+                    app:GuideTxt="이름을 입력해주세요."
+                    app:GuidTxtVisible="false"/>
+
+                <com.example.capstone.textboxJoin
+                    android:id="@+id/nicknameBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:title="닉네임"
+                    app:titleVisible="true"
+                    app:Layout="@drawable/roundborder_g4"
+                    app:hint="닉네임을 입력해주세요."
+                    app:delBtnVisible="false"
+                    app:confirmBtnVisible="false"
+                    app:ConfirmTitle="중복 확인"
+                    app:ConfirmBg="@drawable/roundbtn_g4"
+                    app:GuideTxt="닉네임을 입력해주세요."
+                    app:GuidTxtVisible="false"/>
+
+                <com.example.capstone.textboxJoin
+                    android:id="@+id/phoneBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:title="휴대폰 번호"
+                    android:inputType="phone"
+                    app:titleVisible="true"
+                    app:Layout="@drawable/roundborder_g4"
+                    app:hint="휴대폰 번호를 입력해주세요.(숫자만 입력)"
+                    app:delBtnVisible="false"
+                    app:confirmBtnVisible="false"
+                    app:ConfirmTitle="인증 번호"
+                    app:ConfirmBg="@drawable/roundbtn_g4"
+                    app:GuideTxt="휴대폰 번호를 입력해주세요."
+                    app:GuidTxtVisible="false"/>
+
+<!--                <com.example.capstone.textboxJoin-->
+<!--                    android:id="@+id/checkphoneBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    app:title="인증번호"-->
+<!--                    android:inputType="text"-->
+<!--                    app:titleVisible="true"-->
+<!--                    app:Layout="@drawable/roundborder_g4"-->
+<!--                    app:hint="인증번호를 입력해주세요.(6자리)"-->
+<!--                    app:delBtnVisible="false"-->
+<!--                    app:confirmBtnVisible="false"-->
+<!--                    app:ConfirmTitle=""-->
+<!--                    app:ConfirmBg="@drawable/roundbtn_g4"-->
+<!--                    app:GuideTxt="인증번호를 입력해주세요."-->
+<!--                    app:GuidTxtVisible="false"/>-->
+
+                <Button
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/roundbtn_g"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="확인"
+                    android:textColor="#7e7e7e"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

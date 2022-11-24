@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostChangeActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="6">
+
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_backicon"
+            android:layout_marginRight="10dp"/>
+
+        <!--전체글-->
+
+        <!-- etcIcon을 오른쪽 정렬-->
+        <Button
+            android:visibility="gone"
+            android:id="@+id/communityBtn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_community_plus"
+            android:gravity="center"
+            android:text="자유게시판"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <ImageButton
+            android:id="@+id/checkBtn"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/ic_check" />
+
+    </LinearLayout>
+
+    <!--하단선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="#EEEEEE"
+        android:layout_weight="0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40px"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/write_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:hint="제목을 입력해 주세요"
+            android:textColorHint="#999"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <!--하단선-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="20px"
+            android:background="#EEEEEE"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/postphoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"/>
+
+        <EditText
+            android:id="@+id/write_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="20px"
+            android:hint="내용을 입력해 주세요"
+            android:textColorHint="#999"
+            android:textSize="14dp"
+            android:gravity="top"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+    <!--하단선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#EEEEEE"
+        android:layout_weight="0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="6">
+
+        <Button
+            android:id="@+id/photoaddBtn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_photoaddicon"
+            android:text="0/0"
+            android:textColor="#7e7e7e"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
