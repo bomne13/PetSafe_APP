@@ -39,6 +39,6 @@ https://youtu.be/sKhbJ5g2Wio
 ## Member
 Name|Role&Commit
 ---|---|
-<img src="./images/Girl1.png" width="90px" height="100px"><p align="center">정은혜</p>|📌 Role : App Design / App Front-End / App Back-End|
+<img src="./images/Girl1.png" width="90px" height="100px"><p align="center">정은혜(작성자)</p>|📌 Role : App Design / App Front-End / App Back-End|
 <img src="./images/Girl2.png" width="90px" height="100px"><p align="center">안승연</p>|📌 Role : App Front-End|
 <img src="./images/man.png" width="90px" height="100px"><p align="center">유민우</p>|📌 Role : App Front-End / IoT 설계 및 구현|
